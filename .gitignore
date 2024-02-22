@@ -1,0 +1,13 @@
+### IntelliJ ###
+.idea/
+*.iml
+
+
+### Node.js ###
+
+# Log files
+*.log
+
+# NPM
+node_modules/
+yarn.lock
