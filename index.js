@@ -241,7 +241,7 @@ app.post('/webhook', (req, res) => {
     })
   }
 
-  if (ENDED === event['@type'] && EXECUTION_STEP === eventObjType) {
+  if (ENDED === eventType && EXECUTION_STEP === eventObjType) {
     getStepStateExecution(executionUrl).then(execution => {
       const startedDate = new Date(execution.startedAt)
       const finishedDate = new Date(execution.finishedAt)
