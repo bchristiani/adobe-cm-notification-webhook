@@ -1,5 +1,5 @@
 {
-  "name": "pipeline-notifications",
+  "name": "adobe-cm-notification-webhook",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
