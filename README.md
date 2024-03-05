@@ -21,8 +21,6 @@ The different types of notifications and how they appear in Microsoft Teams are 
 
 ![Pipeline Ended][screenshot-pipeline-ended]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## Getting Started
 
@@ -34,7 +32,7 @@ Before you can start, you must first set up a project in the [Adobe Developer Co
 
 ### Configuration Variables
 
-Populate the file `.env` with the following content:
+Populate the file `.env` in the root of the project with the following content:
 
   ```
   PORT=4000
@@ -72,15 +70,11 @@ Install [Node.js][Node-url] (>=16) and npm, the Node Package Manager, in order t
 5. Open the [Adobe Developer Console][Adobe-Developer-Console-url] and open the Project you created in the Prerequisites section. Click `Add to Project` and select `Event`. Select `Cloud Manager Events` and click `Next`. Select the events you want to subscribe to. Click the `Next` button. For receiving events select the `Webhook` option. The Webhook URL will be the ngrok forwarding address (step 4) appended with `/webhook`, e.g. `https://1a-2b-3c.ngrok.io/webhook`
 6. Once a pipeline execution is triggered in Cloud Manager, the subscribed Cloud Manager Events are sent to the webhook which then posts a message to Microsoft Teams.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE.txt) for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
