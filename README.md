@@ -3,7 +3,7 @@ This webhook allows you to send Adobe Cloud Manager CI/CD Pipeline Notifications
 
 
 ## Sample Notifications in Action
-The different types of notifications and how they appear in Microsoft Teams are presented below. Each notification lists the existing pipeline steps and their current status so that the overall progress of the deployment can be tracked using the most recent message. In addition, each message has a button that allows anyone with Cloud Manager access to access the details of the pipeline execution in Cloud Manager.
+The different types of notifications and how they appear in Microsoft Teams are presented below. Each notification lists the execution steps of the pipeline and its current status, so that the overall progress of the deployment can be read from the latest message. In addition, each message has a button that allows anyone with Cloud Manager access to access the details of the pipeline execution in Cloud Manager.
 
 ### Pipeline Started Notification
 
@@ -68,7 +68,7 @@ Install [Node.js][Node-url] (>=16) and npm, the Node Package Manager, in order t
    ```
 4. Once running ngrok will show you the forwarding address
 5. Open the [Adobe Developer Console][Adobe-Developer-Console-url] and open the Project you created in the Prerequisites section. Click `Add to Project` and select `Event`. Select `Cloud Manager Events` and click `Next`. Select the events you want to subscribe to. Click the `Next` button. For receiving events select the `Webhook` option. The Webhook URL will be the ngrok forwarding address (step 4) appended with `/webhook`, e.g. `https://1a-2b-3c.ngrok.io/webhook`
-6. Once a pipeline execution is triggered in Cloud Manager, the subscribed Cloud Manager Events are sent to the webhook which then posts a message to Microsoft Teams.
+6. Once a pipeline execution is triggered in Cloud Manager, the subscribed Cloud Manager Events are sent to the webhook which then posts a message to your Microsoft Teams channel.
 
 
 <!-- LICENSE -->
