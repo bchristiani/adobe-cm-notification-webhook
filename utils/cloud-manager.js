@@ -64,12 +64,12 @@ function getLink(obj, linkType) {
 function getStepStates(obj) {
   const steps = []
   obj["_embedded"].stepStates.forEach(function (step) {
-    steps.push({'name': `- ${step.action}:`, 'value': step.status})
+    steps.push({'name': `[${step.action}]`, 'value': step.status})
   });
   return steps
 }
 
-function getPipelineExecutionUrl(obj, linkType) {
+function getCloudManagerExecutionDetailsLink(obj, linkType) {
   const pipelineExecutionPath = getLink(obj, linkType).replace("/api", "")
   return process.env.CM_PIPELINE_EXECUTION_BASE_URL + pipelineExecutionPath
 }
@@ -103,4 +103,4 @@ module.exports.REL_EXECUTION = REL_EXECUTION;
 module.exports.getExecution = getExecution;
 module.exports.getStepStateExecution = getStepStateExecution;
 module.exports.getStepStates = getStepStates;
-module.exports.getPipelineExecutionUrl = getPipelineExecutionUrl;
+module.exports.getCloudManagerExecutionDetailsLink = getCloudManagerExecutionDetailsLink;

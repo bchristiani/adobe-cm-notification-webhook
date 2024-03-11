@@ -1,8 +1,8 @@
 # Microsoft Teams Notifications for Adobe Cloud Manager Pipeline
-This webhook allows you to send Adobe Cloud Manager CI/CD Pipeline Notifications to Microsoft Teams. You can use it to post and monitor the status of your Cloud Manager deployment pipeline without having to log in to Cloud Manager. It's a simple [Node.js][Node-url] application built on [Express][Express-url]. The webhook script can be deployed and run using [Glitch](https://glitch.com), for example.
+This webhook allows you to send Adobe Cloud Manager CI/CD Pipeline Notifications to Microsoft Teams. You can use it to post and monitor the status of your Cloud Manager deployment pipeline without having to log in to Cloud Manager. It's a simple [Node.js][Node-url] application built on [Express][Express-url].
 
 
-## Sample Notifications in Action
+## Sample Notifications
 The different types of notifications and how they appear in Microsoft Teams are presented below. Each notification lists the execution steps of the pipeline and its current status, so that the overall progress of the deployment can be read from the latest message. In addition, each message has a button that allows anyone with Cloud Manager access to access the details of the pipeline execution in Cloud Manager.
 
 ### Pipeline Started Notification

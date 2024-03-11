@@ -1,6 +1,6 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-module.exports = function notifyTeams (title, status, pipeline, program, steps, pipelineUrl) {
+module.exports = function notifyTeams (title, status, pipeline, program, steps, cmExecutionDetailsLink) {
   fetch(process.env.TEAMS_WEBHOOK, {
     'method': 'POST',
     'headers': { 'Content-Type': 'application/json' },
@@ -26,21 +26,18 @@ module.exports = function notifyTeams (title, status, pipeline, program, steps, 
           ]
         },
         {
-          'activityTitle': '**Summary Steps:**',
+          'activityTitle': '**Execution Steps:**',
           'facts': steps,
         },
-        {
-          'activityTitle': 'View pipeline in Cloud Manager (requires cloud manager access)'
-        }
       ],
       'potentialAction': [
         {
           '@type':'OpenUri',
-          'name': 'Pipeline Details',
+          'name': 'View Details in Cloud Manager',
           'targets': [
             {
               'os': 'default',
-              'uri': pipelineUrl
+              'uri': cmExecutionDetailsLink
             }
           ]
         }
